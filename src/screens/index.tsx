@@ -15,8 +15,12 @@ export function Index() {
 
   const navigation = useNavigation();
 
-  function handleIndex() {
+  function toRegister() {
     navigation.navigate('Register');
+  }
+
+  function toPerfil1() {
+    navigation.navigate('Perfil1');
   }
 
   /* Estados para caixa de digitação */
@@ -69,13 +73,13 @@ export function Index() {
         source={require('../../assets/logos/google.png')} 
       />       
       <TouchableOpacity
-        onPress={handleIndex}
+        onPress={toRegister}
         style={styles.botaoNaoCadastrado}>
         <Text style={styles.cortextologin}>Não sou cadastrado</Text>               
       </TouchableOpacity>
       
       <TouchableOpacity 
-        onPress={() => Alert.alert('Entrar','Você terá longa vida e saúde!')}      
+        onPress={toPerfil1}      
         style={styles.botaologin}>
         <Text style={styles.cortextologin2}>Entrar</Text>
       </TouchableOpacity>  

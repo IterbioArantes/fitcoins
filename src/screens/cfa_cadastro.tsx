@@ -9,7 +9,7 @@ export function Register(){
 
   const navigation = useNavigation();
 
-  function handleGoBack() {
+  function backIndex() {
     navigation.goBack();
   }
 
@@ -73,7 +73,7 @@ export function Register(){
   return(
     <View>
       <View style={styles.topBar}>
-            <TouchableOpacity onPress={handleGoBack}>
+            <TouchableOpacity onPress={backIndex}>
                 <Image source={seta} style={styles.icon}/>
             </TouchableOpacity>
            <Text style={styles.title}>
