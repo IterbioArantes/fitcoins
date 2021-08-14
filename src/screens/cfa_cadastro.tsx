@@ -9,8 +9,8 @@ export function Register(){
 
   const navigation = useNavigation();
 
-  function handleRegister() {
-    navigation.navigate('Index');
+  function handleGoBack() {
+    navigation.goBack();
   }
 
   const [email, setEmail] = useState('');
@@ -73,7 +73,7 @@ export function Register(){
   return(
     <View>
       <View style={styles.topBar}>
-            <TouchableOpacity onPress={handleRegister}>
+            <TouchableOpacity onPress={handleGoBack}>
                 <Image source={seta} style={styles.icon}/>
             </TouchableOpacity>
            <Text style={styles.title}>
