@@ -1,10 +1,15 @@
 import React from 'react';
+import {StatusBar} from 'react-native';
+
+import { Routes } from './src/routes';
 import { Register } from './src/screens/cfa_cadastro';
-import { Index } from './src/screens/index';
 
 export default function App(){
   return(
-    <Index/>
+    <>
+      <StatusBar barStyle='light-content'/>
+      <Routes/>
+    </>
     //<Register />
   );
 }

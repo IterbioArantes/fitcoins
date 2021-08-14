@@ -1,8 +1,8 @@
 /* TELA DE LOGIN CFA_Login2.jsx do FitCoins */
 
 import React from 'react';
-import { StatusBar, Text, TextInput, KeyboardAvoidingView, 
-  View, Image, Alert, TouchableOpacity} from 'react-native';
+import { Text, TextInput, View, Image, Alert, TouchableOpacity} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
  /* Fontes e estados para caixa de digitação */ 
 import { useFonts } from 'expo-font';
@@ -10,7 +10,14 @@ import { useState } from 'react';
 
 import { styles } from '../styles/index_styles';
 
+
 export function Index() {
+
+  const navigation = useNavigation();
+
+  function handleIndex() {
+    navigation.navigate('Register');
+  }
 
   /* Estados para caixa de digitação */
   const [input, setInput] = useState('');
@@ -31,7 +38,6 @@ export function Index() {
     /* View principal para prevenir subida indesejada do teclado (iOS) */
     <View>
       <View style={styles.barra}>
-        <StatusBar barStyle='light-content'/>
         <Text style={styles.entrar}>Entrar</Text>
       </View>
       <View>
@@ -63,7 +69,7 @@ export function Index() {
         source={require('../../assets/logos/google.png')} 
       />       
       <TouchableOpacity
-        onPress={() => Alert.alert('Não sou cadastrado','Quero ser FitCoin!')}
+        onPress={handleIndex}
         style={styles.botaoNaoCadastrado}>
         <Text style={styles.cortextologin}>Não sou cadastrado</Text>               
       </TouchableOpacity>

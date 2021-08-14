@@ -1,12 +1,17 @@
 import React, {useState} from 'react';
-import { View, TextInput, StatusBar, Text, TouchableOpacity, Alert, Image } from 'react-native';
+import { View, TextInput, Text, TouchableOpacity, Alert, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-//import { ButtonEnter } from '../../button';
-//import { TopBar } from '../../topBar';
 import { styles } from '../styles/cfa_cadastro_style';
 import seta from '../../assets/seta.png';
 
 export function Register(){
+
+  const navigation = useNavigation();
+
+  function handleRegister() {
+    navigation.navigate('Index');
+  }
 
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -68,7 +73,7 @@ export function Register(){
   return(
     <View>
       <View style={styles.topBar}>
-            <TouchableOpacity onPress={() => Alert.alert('Back')}>
+            <TouchableOpacity onPress={handleRegister}>
                 <Image source={seta} style={styles.icon}/>
             </TouchableOpacity>
            <Text style={styles.title}>
@@ -76,7 +81,6 @@ export function Register(){
            </Text>
        </View>
       <View style={styles.container}>
-        <StatusBar barStyle='light-content'/>
 
         <TextInput onChangeText={(email) => {setEmail(email);emailValidator(email);}} placeholder = "Email" style={styles.input} />
         <Text style={styles.error}>{emailError}</Text>
