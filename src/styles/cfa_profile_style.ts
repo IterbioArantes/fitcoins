@@ -59,9 +59,20 @@ export const styles = StyleSheet.create({
       height: 80,
       justifyContent: 'center',      
     },
-    gdados: {
-      top:-15,
-      height:30,
+    salvar: {
+      top: '3%',
+      left: '20%',
+      width: 200,
+      height:50,
+      backgroundColor: '#480F31',
+      borderRadius: 100,
+      justifyContent: 'center',
+    },
+    texto_salvar: {
+      fontSize: 20,  
+      fontFamily: 'Quicksand',
+      color: '#FFFF',
+      left: 35,
     },
     texto_1:{
       top: '68%',
@@ -98,7 +109,7 @@ export const styles = StyleSheet.create({
     },
     barra_icones: {
       padding: 8,
-      top: 33,
+      top: 18,
       height: 65,
       flexDirection: 'row',
       justifyContent: 'space-around',     
