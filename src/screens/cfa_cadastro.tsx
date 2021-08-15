@@ -73,13 +73,13 @@ export function Register(){
   return(
     <View>
       <View style={styles.topBar}>
-            <TouchableOpacity onPress={backIndex}>
-                <Image source={seta} style={styles.icon}/>
-            </TouchableOpacity>
-           <Text style={styles.title}>
-               Cadastre-se
-           </Text>
-       </View>
+        <TouchableOpacity onPress={backIndex}>
+            <Image source={seta} style={styles.icon}/>
+        </TouchableOpacity>
+        <Text style={styles.title}>
+            Cadastre-se
+        </Text>
+      </View>
       <View style={styles.container}>
 
         <TextInput onChangeText={(email) => {setEmail(email);emailValidator(email);}} placeholder = "Email" style={styles.input} />

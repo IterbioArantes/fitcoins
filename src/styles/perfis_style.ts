@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
     content:{
         justifyContent: 'center',
         alignItems: 'center',
+        marginBottom: 8,
     },
     content2:{
         marginLeft:22,

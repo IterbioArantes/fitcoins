@@ -19,17 +19,29 @@ export function Perfil2(){
 
     function validateToggleCheckBox(key:number){
         if(key == 1){
-            setToggleCheckBox2(false)
-            setToggleCheckBox3(false)
-            return setToggleCheckBox1(true)
+            if(toggleCheckBox1 == true){
+                setToggleCheckBox1(false)
+            }else{
+                setToggleCheckBox2(false)
+                setToggleCheckBox3(false)
+                setToggleCheckBox1(true)
+            }
         } else if (key == 2){
-            setToggleCheckBox1(false)
-            setToggleCheckBox3(false)
-            return setToggleCheckBox2(true)
+            if(toggleCheckBox2 == true){
+                setToggleCheckBox2(false)
+            }else{
+                setToggleCheckBox1(false)
+                setToggleCheckBox3(false)
+                setToggleCheckBox2(true)
+            }
         } else if (key == 3){
-            setToggleCheckBox1(false)
-            setToggleCheckBox2(false)
-            return setToggleCheckBox3(true)
+            if(toggleCheckBox3 == true){
+                setToggleCheckBox3(false)
+            } else {
+                setToggleCheckBox1(false)
+                setToggleCheckBox2(false)
+                setToggleCheckBox3(true)
+            }
         }
     }
 
