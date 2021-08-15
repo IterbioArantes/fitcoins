@@ -8,20 +8,20 @@ import { styles } from '../styles/perfis_style';
 
 export function Perfil3(){
 
-    const textInput1 = useRef(null);
-    const textInput2 = useRef(null);
-    const textInput3 = useRef(null);
+    const textInput1 = useRef<TextInput>(null) 
+    const textInput2 = useRef<TextInput>(null);
+    const textInput3 = useRef<TextInput>(null);
 
     function clickDate(){
-        textInput1.current.focus();
+        textInput1.current?.focus();
     }
 
     function clickHeigh() {
-        textInput2.current.focus();
+        textInput2.current?.focus();
     }
 
     function clickWeight() {
-        textInput3.current.focus();
+        textInput3.current?.focus();
     }
 
     const [styleGener,setStyleGener] = useState(styles.detailGener);
