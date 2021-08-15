@@ -11,6 +11,56 @@ export const styles = StyleSheet.create({
         marginRight:22,
         marginTop:77
     },
+    content3:{
+        marginLeft:22,
+        marginRight:22,
+        marginTop:20
+    },
+    detailsContent:{
+        flexDirection:'row',
+        justifyContent: 'space-between'
+    },
+    detailsContentPress:{
+        flexDirection:'row',
+        justifyContent: 'space-between',
+        marginTop:19,
+        marginBottom: 19
+    },
+    detailsTitle:{
+        fontSize:20,
+        color: '#707070',
+    },
+    detailInput:{
+        width:35,
+        fontSize:18,
+        color:'#480F31'
+    },
+    detailGener:{
+        fontSize:18,
+        color:'#480F31',
+        borderStyle: 'solid',
+        borderWidth: 1,
+        padding: 2,
+        paddingLeft: 5,
+        paddingRight: 5,
+        borderRadius: 3
+    },
+    detailGenerPressed:{
+        fontSize:18,
+        color:'white',
+        backgroundColor: '#480F31',
+        borderStyle: 'solid',
+        borderWidth: 1,
+        padding: 2,
+        paddingLeft: 5,
+        paddingRight: 5,
+        borderRadius: 3
+    },
+    detailsDesc:{
+        fontSize:18,
+        color: '#480F31',
+        marginTop: 1
+    },
     titles1:{
         textAlign: 'center',
         color:  '#051A98',
@@ -31,6 +81,15 @@ export const styles = StyleSheet.create({
         borderRadius: 30,
         width: '85%',
         marginTop: 60
+    },
+    button2:{
+        height: 50,
+        backgroundColor: '#480F31',
+        justifyContent: 'center',
+        alignItems:'center',
+        borderRadius: 30,
+        width: '85%',
+        marginTop: 37
     },
     buttonTitle:{
         color: 'white',
@@ -70,6 +129,10 @@ export const styles = StyleSheet.create({
         marginRight:5,
         marginTop: 38,
         marginBottom: 18
+    },
+    separator2:{
+        borderBottomColor: 'gray',
+        borderBottomWidth: 1
     },
     checkBoxContainer:{
         marginTop:12,
