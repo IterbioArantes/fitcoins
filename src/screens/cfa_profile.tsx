@@ -137,18 +137,14 @@ export function Profile() {
           </View>
         </RadioButton.Group>
       </View>
-      <View
-        style={styles.gdados}>
-        <Text style={styles.texto_3}>Gerenciar Dados</Text>
-        <View
-          style={{width: 40, left: '65%', top: -18}}>
-          <AntDesign.Button name="right" 
-            color="#707070" 
-            backgroundColor='#FFFF' 
-            onPress={() => Alert.alert('Gerenciar Dados','Gerenciar!')}>
-          </AntDesign.Button> 
-        </View>
-      </View> 
+      <TouchableOpacity
+        style={styles.salvar}
+        onPress={() => Alert.alert('Salvar Dados','Writing 640 KB Floppy Disc')}>
+        <Text
+          style={styles.texto_salvar}>
+          Salvar Dados
+        </Text>        
+      </TouchableOpacity> 
       <View
         style={styles.barra_icones}>
         <View
