@@ -2,18 +2,16 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     topBar:{
-        width: 375,
+        width: '100%',
         height: 80,
-        backgroundColor: '#07055C',
+        backgroundColor: '#480F31',
         alignItems: 'center',
-        flexDirection: 'row',
+        flexDirection: 'row', 
     },
     title:{
-        flex:1,
-        width:19,
         color:'white',
         fontSize: 20,
-        marginLeft: 75
+        marginLeft: '21.5%'
     },
     icon:{
         marginLeft: 27,
@@ -42,7 +40,7 @@ export const styles = StyleSheet.create({
     },
     containerEnter:{
         height: 50,
-        backgroundColor: '#07055C',
+        backgroundColor: '#480F31',
         justifyContent: 'center',
         alignItems:'center',
         borderRadius: 30,

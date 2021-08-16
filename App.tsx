@@ -3,6 +3,9 @@ import {StatusBar} from 'react-native';
 
 import { Routes } from './src/routes';
 import { Register } from './src/screens/cfa_cadastro';
+import { Perfil1 } from './src/screens/perfil1';
+import { Perfil2 } from './src/screens/perfil2';
+import { Perfil3 } from './src/screens/perfil3';
 
 export default function App(){
   return(
@@ -10,6 +13,7 @@ export default function App(){
       <StatusBar barStyle='light-content'/>
       <Routes/>
     </>
+    //<Perfil1/>
     //<Register />
   );
 }

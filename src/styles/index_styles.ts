@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     barra: {
       height: '10%',
-      backgroundColor: '#07055C',
+      backgroundColor: '#480F31',
       justifyContent: 'center',    
     },
     entrar: {
@@ -70,7 +70,7 @@ export const styles = StyleSheet.create({
       left: '6%',
       top: '-8%',
       borderRadius: 25,
-      backgroundColor: '#07055C',
+      backgroundColor: '#480F31',
       justifyContent: 'center',
       alignItems: 'center',
     },
