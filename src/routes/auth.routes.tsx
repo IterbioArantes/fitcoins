@@ -7,6 +7,7 @@ import { Register } from '../screens/cfa_cadastro';
 import { Perfil1 } from '../screens/perfil1';
 import { Perfil2 } from '../screens/perfil2';
 import { Perfil3 } from '../screens/perfil3';
+import { Home } from '../screens/home';
 
 const { Navigator, Screen} = createStackNavigator();
 
@@ -34,6 +35,10 @@ export function AuthRoutes(){
             <Screen
                 name="Perfil3"
                 component={Perfil3}
+            />
+            <Screen
+                name="Home"
+                component={Home}
             />
         </Navigator>
     )

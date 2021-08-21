@@ -8,6 +8,8 @@ import { styles } from '../styles/perfis_style';
 
 export function Perfil3(){
 
+    const navigation = useNavigation();
+
     const textInput1 = useRef<TextInput>(null) 
     const textInput2 = useRef<TextInput>(null);
     const textInput3 = useRef<TextInput>(null);
@@ -53,6 +55,10 @@ export function Perfil3(){
 
     function onToggleSwitch(){
         setIsSwitchOn(!isSwitchOn);
+    }
+
+    function toHome(){
+        navigation.navigate('Home');
     }
 
     return(
@@ -108,7 +114,7 @@ export function Perfil3(){
                 </View>
             </View>
             <View style={styles.content}>
-                <TouchableOpacity onPress={() => Alert.alert('aaa')} style={styles.button2}>
+                <TouchableOpacity onPress={toHome} style={styles.button2}>
                     <Text style={styles.buttonTitle}>Começar</Text>
                 </TouchableOpacity>
                 <View style={styles.flexDots}>

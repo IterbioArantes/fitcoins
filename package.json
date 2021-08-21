@@ -13,6 +13,7 @@
     "@maksymblank/react-native-date-input": "^1.0.1",
     "@react-native-community/checkbox": "^0.5.8",
     "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/drawer": "^6.1.4",
     "@react-navigation/native": "^5.9.6",
     "@react-navigation/stack": "^5.14.7",
     "expo": "~42.0.1",
@@ -28,10 +29,13 @@
     "react-native-gesture-handler": "~1.10.2",
     "react-native-modal": "^12.0.3",
     "react-native-neat-date-picker": "^1.0.6",
+    "react-native-paper": "^4.9.2",
     "react-native-reanimated": "~2.2.0",
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.4.0",
     "react-native-web": "^0.17.1",
+    "react-navigation": "^4.4.4",
+    "react-navigation-drawer": "^2.7.1",
     "toggle-switch-react-native": "^3.2.0"
   },
   "devDependencies": {
