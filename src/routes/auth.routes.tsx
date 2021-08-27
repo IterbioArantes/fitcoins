@@ -9,6 +9,7 @@ import { Perfil2 } from '../screens/perfil2';
 import { Perfil3 } from '../screens/perfil3';
 import { Home } from '../screens/home';
 import { Profile } from '../screens/cfa_profile';
+import { Carteira } from '../screens/carteira';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -44,7 +45,11 @@ export function AuthRoutes(){
             <Screen
                 name="Profile"
                 component={Profile}
-            />            
+            />        
+            <Screen
+                name="Carteira"
+                component={Carteira}
+            />                   
             
         </Navigator>
     )
