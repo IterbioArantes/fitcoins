@@ -21,24 +21,25 @@ export const styles = StyleSheet.create({
     },
     contentRooms:{
         width: '87.2%',
-        height: 159,
+        height: 170,
         backgroundColor: '#87235F',
         borderRadius: 25,
         alignItems: 'center',
         paddingLeft: 14,
         paddingRight: 14,
-        paddingBottom: 17,
-        paddingTop: 17
+        paddingBottom: 15,
     },
     buttonsRooms:{
-        width: 216,
-        height: 61,
+        width: 144,
+        height: 87,
         backgroundColor:'#480F31',
         borderRadius: 25,
         alignItems: 'center',
         justifyContent: 'center',
     },
     textbuttonsRooms:{
+        alignItems: 'center',
+        justifyContent: 'center',
         color: 'white',
         fontSize: 20
     },
@@ -49,5 +50,20 @@ export const styles = StyleSheet.create({
         backgroundColor:'#87235F',
         alignItems: 'center',
         justifyContent:'center'
-    }
+    },
+    buttonsRoomsHeader:{
+        width: 81,
+        height: 36,
+        backgroundColor:'#480F31',
+        borderBottomRightRadius:10,
+        borderBottomLeftRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    textbuttonsRoomsHeader:{
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: 'white',
+        fontSize: 14
+    },
 });
