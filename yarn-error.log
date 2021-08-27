@@ -1,26 +1,26 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\iaa\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add reac-native-modal-datetime-picker
+  /usr/bin/node /usr/bin/yarn add react-native-community
 
 PATH: 
-  C:\Program Files\Java\jdk1.8.0_301\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Users\iaa\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\cmd;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\iaa\AppData\Local\Microsoft\WindowsApps;C:\Users\iaa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\iaa\AppData\Local\GitHubDesktop\bin;C:\Users\iaa\AppData\Roaming\npm
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
 
 Yarn version: 
-  1.22.10
+  1.22.11
 
 Node version: 
   14.17.5
 
 Platform: 
-  win32 x64
+  linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/reac-native-modal-datetime-picker: Not found
-      at Request.params.callback [as _callback] (C:\Users\iaa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
-      at Request.self.callback (C:\Users\iaa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
+  Error: https://registry.yarnpkg.com/react-native-community: Not found
+      at Request.params.callback [as _callback] (/usr/lib/node_modules/yarn/lib/cli.js:66992:18)
+      at Request.self.callback (/usr/lib/node_modules/yarn/lib/cli.js:140763:22)
       at Request.emit (events.js:400:28)
-      at Request.<anonymous> (C:\Users\iaa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
+      at Request.<anonymous> (/usr/lib/node_modules/yarn/lib/cli.js:141735:10)
       at Request.emit (events.js:400:28)
-      at IncomingMessage.<anonymous> (C:\Users\iaa\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
+      at IncomingMessage.<anonymous> (/usr/lib/node_modules/yarn/lib/cli.js:141657:12)
       at Object.onceWrapper (events.js:519:28)
       at IncomingMessage.emit (events.js:412:35)
       at endReadableNT (internal/streams/readable.js:1317:12)
@@ -39,24 +39,32 @@ npm manifest:
     "dependencies": {
       "@breeffy/react-native-calendar": "^0.4.1",
       "@expo-google-fonts/roboto": "^0.2.0",
+      "@maksymblank/react-native-date-input": "^1.0.1",
       "@react-native-community/checkbox": "^0.5.8",
       "@react-native-community/masked-view": "0.1.10",
+      "@react-navigation/drawer": "^6.1.4",
       "@react-navigation/native": "^5.9.6",
       "@react-navigation/stack": "^5.14.7",
       "expo": "~42.0.1",
       "expo-status-bar": "~1.0.4",
+      "moment": "^2.29.1",
       "react": "16.13.1",
       "react-dom": "16.13.1",
       "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
       "react-native-app-intro-slider": "^4.0.4",
+      "react-native-calendar-picker": "^7.1.2",
+      "react-native-calendario": "^2.1.6",
       "react-native-datefield": "^0.3.2",
       "react-native-gesture-handler": "~1.10.2",
       "react-native-modal": "^12.0.3",
       "react-native-neat-date-picker": "^1.0.6",
+      "react-native-paper": "^4.9.2",
       "react-native-reanimated": "~2.2.0",
       "react-native-safe-area-context": "3.2.0",
       "react-native-screens": "~3.4.0",
       "react-native-web": "^0.17.1",
+      "react-navigation": "^4.4.4",
+      "react-navigation-drawer": "^2.7.1",
       "toggle-switch-react-native": "^3.2.0"
     },
     "devDependencies": {

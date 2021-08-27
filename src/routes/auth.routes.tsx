@@ -8,8 +8,9 @@ import { Perfil1 } from '../screens/perfil1';
 import { Perfil2 } from '../screens/perfil2';
 import { Perfil3 } from '../screens/perfil3';
 import { Home } from '../screens/home';
+import { Profile } from '../screens/cfa_profile';
 
-const { Navigator, Screen} = createStackNavigator();
+const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes(){
     return(
@@ -19,7 +20,7 @@ export function AuthRoutes(){
             <Screen
                 name="Index"
                 component={Index}
-            />
+            />            
             <Screen
                 name="Register"
                 component={Register}
@@ -40,6 +41,11 @@ export function AuthRoutes(){
                 name="Home"
                 component={Home}
             />
+            <Screen
+                name="Profile"
+                component={Profile}
+            />            
+            
         </Navigator>
     )
 }

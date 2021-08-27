@@ -1,195 +1,187 @@
 /* TELA CFA_PROFILE do FitCoins */
 
-import React from 'react';
-import { StatusBar, Text, TextInput, 
-    View, Image, Alert, TouchableOpacity} from 'react-native';
-import { RadioButton } from 'react-native-paper';
-import { AntDesign, Feather,Ionicons, FontAwesome } from '@expo/vector-icons';
+import React, {useState,useRef} from 'react';
+import { View, TextInput, Text, TouchableOpacity, Alert, Image, StatusBar } from 'react-native';
 
- /* Fontes e estados para caixa de digitação */ 
-import { useFonts } from 'expo-font';
-import { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import { styles } from '../styles/cfa_profile_style';
 
-export function Profile() {
+export function Profile(){
 
-  /* Estados para caixa de digitação */
-  const [data_nasc, setData_nasc] = useState('');
-  const [altura, setAltura] = useState('');
-  const [peso, setPeso] = useState("");  
+    const navigation = useNavigation();
 
-  //Botões checkbox
-  const [valor_genero, setValor_genero] = React.useState('first');
-  const [valor_cond, setValor_cond] = React.useState('first');
-  
-  // Ativação das fontes para estilos 
-  const [loaded] = useFonts({
-    Quicksand: require('../../assets/fonts/Quicksand_Bold.otf'),
-    Inter: require('../../assets/fonts/Inter-Regular.ttf')
-  });
-  if (!loaded) {
-    return null;
-  }
+    const textInput1 = useRef<TextInput>(null) 
+    const textInput2 = useRef<TextInput>(null);
+    const textInput3 = useRef<TextInput>(null);
 
-  return (
+    function clickDate(){
+        textInput1.current?.focus();
+    }
 
-    <View>
-      <View style={styles.barra}>
-        <StatusBar barStyle='light-content'/>
-        <Text style={styles.entrar}>Editar perfil</Text>
-      </View>
-      <TouchableOpacity
-        onPress={() => Alert.alert('Seta Esquerda','Sai pra lá!')}
-        style={styles.seta}>
-        <Image 
-          source={require('../../assets/seta.png')} 
-        />       
-      </TouchableOpacity>
-      <View
-        style={styles.caixa}>
-        <Text style={styles.textos_caixas}>Aniversário</Text> 
-        <TextInput 
-          style={styles.digita}
-          placeholder='DD/MM/AAAA'
-          placeholderTextColor= '#A4A2AA'
-          value= {data_nasc}
-          onChangeText= {(texto_data_nasc) => setData_nasc(texto_data_nasc)}>                        
-        </TextInput>
-      </View>
-      <View
-        style={styles.caixa}>    
-        <Text style={styles.textos_caixas}>Altura</Text>
-        <TextInput 
-          style={styles.digita}
-          placeholder='m'
-          placeholderTextColor= '#A4A2AA'
-          value= {altura}
-          onChangeText= {(texto_altura) => setAltura(texto_altura)}>                 
-        </TextInput>
-      </View>
-      <View
-        style={styles.caixa}>
-        <Text style={styles.textos_caixas}>Peso</Text>
-        <TextInput 
-          style={styles.digita}
-          placeholder='kg'
-          placeholderTextColor= '#A4A2AA'
-          value= {peso}
-          onChangeText= {(texto_peso) => setPeso(texto_peso)}>                  
-        </TextInput>
-      </View>  
-      <View
-        style={styles.botao_grupo}>
-        <Text style={styles.texto_1}>Gênero</Text>
-        <RadioButton.Group 
-          onValueChange={newValue => setValor_genero(newValue)} 
-          value={valor_genero}>
-          <View
-            style={styles.botao1}>
-            <Text style={styles.textos_botoes}>Masculino</Text>
-            <RadioButton 
-              value="masculino"
-              color = '#707070'/>
-          </View>
-          <View
-            style={styles.botao2}>
-            <Text style={styles.textos_botoes}>Feminino</Text>
-            <RadioButton 
-              value="feminino"
-              color = '#707070'/>
-          </View>
-          <View
-            style={styles.botao3}>
-            <Text style={styles.textos_botoes}>Não declarado</Text>
-            <RadioButton 
-              value="indefinido"
-              color = '#707070'/>
-          </View>
-        </RadioButton.Group>
-      </View>
-      <View
-        style={styles.botao_grupo}>
-        <Text style={styles.texto_2}>Condicionamento</Text>
-        <RadioButton.Group 
-          onValueChange={newValue => setValor_cond(newValue)} 
-          value={valor_cond}>
-          <View
-            style={styles.botao4}>
-            <Text style={styles.textos_botoes}>Iniciante</Text>
-            <RadioButton 
-              value="iniciante"
-              color = '#707070'/>
-          </View>
-          <View
-            style={styles.botao5}>
-            <Text style={styles.textos_botoes}>Intermediário</Text>
-            <RadioButton 
-              value="intermediario"
-              color = '#707070'/>
-          </View>
-          <View
-            style={styles.botao6}>
-            <Text style={styles.textos_botoes}>Avançado</Text>
-            <RadioButton 
-              value="avancado"
-              color = '#707070'/>
-          </View>
-        </RadioButton.Group>
-      </View>
-      <TouchableOpacity
-        style={styles.salvar}
-        onPress={() => Alert.alert('Salvar Dados','Writing 640 KB Floppy Disc')}>
-        <Text
-          style={styles.texto_salvar}>
-          Salvar Dados
-        </Text>        
-      </TouchableOpacity> 
-      <View
-        style={styles.barra_icones}>
-        <View
-          style={styles.icone_barra}>
-          <Ionicons.Button name="body" 
-            color="#707070" 
-            backgroundColor='#FFFF' 
-            onPress={() => Alert.alert('Exercício','Mexa-se!')}>
-          </Ionicons.Button> 
-        </View>
-        <View
-          style={styles.icone_barra}>
-          <FontAwesome.Button name="search" 
-            color="#707070" 
-            backgroundColor='#FFFF' 
-            onPress={() => Alert.alert('Pesquisar','Aonde???!')}>
-          </FontAwesome.Button> 
-        </View>
-        <View
-          style={styles.icone_barra}>
-          <Feather.Button name="home" 
-            color="#707070" 
-            backgroundColor='#FFFF' 
-            onPress={() => Alert.alert('Home','Volta ao início da bagaça')}>
-          </Feather.Button> 
-        </View>
-        <View
-          style={styles.icone_barra}>
-          <Feather.Button name="play-circle" 
-            color="#707070" 
-            backgroundColor='#FFFF' 
-            onPress={() => Alert.alert('Play','Meteflix')}>
-          </Feather.Button> 
-        </View>
-        <View
-          style={styles.icone_barra}>
-          <Feather.Button name="more-horizontal" 
-            color="#707070" 
-            backgroundColor='#FFFF' 
-            onPress={() => Alert.alert('Três Pontinhos','Configura!')}>
-          </Feather.Button> 
-        </View>
+    function clickHeigh() {
+        textInput2.current?.focus();
+    }
 
-      </View>
-        
-    </View>      
-  );
+    function clickWeight() {
+        textInput3.current?.focus();
+    }
+
+    const [styleGener,setStyleGener] = useState(styles.detailGener);
+    const [styleGener2,setStyleGener2] = useState(styles.detailGener);
+    const [sexo, setSexo] = useState('');
+
+    const [styleCond,setStyleCond] = useState(styles.detailCond);
+    const [styleCond2,setStyleCond2] = useState(styles.detailCond);
+    const [styleCond3,setStyleCond3] = useState(styles.detailCond);
+    const [cond, setCond] = useState('');
+
+    const [aniversario, setAniversario] = useState('');
+    const [altura, setAltura] = useState('');
+    const [peso, setPeso] = useState('');
+
+    function styleGenerValidateM(){
+        if(styleGener2 == styles.detailGenerPressed){
+            setStyleGener2(styles.detailGener)
+        }
+        if(styleGener == styles.detailGener){
+            setStyleGener(styles.detailGenerPressed)
+            setSexo('Homem')
+        } else {
+            setStyleGener(styles.detailGener)
+            setSexo('')
+        }
+    }
+
+    function styleGenerValidateW(){
+        if(styleGener == styles.detailGenerPressed){
+            setStyleGener(styles.detailGener)
+        }
+        if(styleGener2 == styles.detailGener){
+            setStyleGener2(styles.detailGenerPressed)
+            setSexo('Mulher')
+        } else {
+            setStyleGener2(styles.detailGener)
+            setSexo('')
+        }
+    }
+
+    function styleCondValidateB(){
+        setStyleCond(styles.detailCondPressed)
+        setStyleCond2(styles.detailCond)
+        setStyleCond3(styles.detailCond)
+        setCond('Iniciante')        
+       
+    }
+    function styleCondValidateI(){
+        setStyleCond2(styles.detailCondPressed)
+        setStyleCond(styles.detailCond)
+        setStyleCond3(styles.detailCond)
+        setCond('Intermediario')
+    }
+    function styleCondValidateA(){
+        setStyleCond3(styles.detailCondPressed)
+        setStyleCond2(styles.detailCond)
+        setStyleCond(styles.detailCond)
+        setCond('Avancado')      
+    }
+
+    const [isSwitchOn, setIsSwitchOn] = useState(false);
+
+    function onToggleSwitch(){
+        setIsSwitchOn(!isSwitchOn);
+    }
+
+    function toHome(){
+        navigation.navigate('Home');
+    }
+
+    const json_voorhees = {
+        aniversario: aniversario,
+        altura: altura,
+        peso: peso,
+        sexo: sexo,
+        cond: cond
+    }
+
+    return(
+        <>
+            <View style={styles.barra}>
+                <StatusBar barStyle='light-content'/>
+                <Text style={styles.entrar}>Editar perfil</Text>
+            </View>
+            <TouchableOpacity
+                onPress={() => Alert.alert('Seta Esquerda','Sai pra lá!')}
+                style={styles.seta}>
+                <Image 
+                    source={require('../../assets/seta.png')} 
+                />       
+            </TouchableOpacity>  
+            <View style={styles.content3}>
+                <TouchableOpacity onPress={()=>clickDate()} style={styles.detailsContentPress}>
+                    <Text style={styles.detailsTitle}>Aniversário</Text>
+                    <View style={styles.detailsContent}>
+                        <TextInput style={{fontSize:18,color:'#480F31'}} placeholder={'dd/mm/yyyy'} 
+                            ref={textInput1} onChangeText= {(aniversario) => setAniversario(aniversario)}></TextInput>
+                    </View>
+                </TouchableOpacity>
+                <View style={styles.separator2}></View>           
+                <TouchableOpacity onPress={()=>clickHeigh()} style={styles.detailsContentPress}>
+                    <Text style={styles.detailsTitle}>Altura</Text>
+                    <View style={styles.detailsContent}>
+                        <TextInput ref={textInput2} maxLength = {3} keyboardType={'numeric'} 
+                            style={styles.detailInput} onChangeText= {(altura) => setAltura(altura)}></TextInput>
+                        <Text style={styles.detailsDesc}>cm</Text>
+                    </View>
+                </TouchableOpacity>
+                <View style={styles.separator2}></View>
+                <TouchableOpacity onPress={()=>clickWeight()} style={styles.detailsContentPress}>
+                    <Text style={styles.detailsTitle}>Peso</Text>
+                    <View style={styles.detailsContent}>
+                        <TextInput ref={textInput3} maxLength = {3} keyboardType={'numeric'} 
+                            style={styles.detailInput} onChangeText= {(peso) => setPeso(peso)}></TextInput>
+                        <Text style={styles.detailsDesc}>kg</Text>
+                    </View>
+                </TouchableOpacity>
+                <View style={styles.separator2}></View>
+                <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:24, marginBottom: 24}}>
+                    <Text style={styles.detailsTitle}>Gênero</Text>
+                    <View style={styles.detailsContent}>
+                        <TouchableOpacity onPress={()=> styleGenerValidateM()}>
+                            <Text style={styleGener}>Homem</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={()=> styleGenerValidateW()}>
+                            <Text style={styleGener2}>Mulher</Text>
+                        </TouchableOpacity>
+                    </View>                    
+                </View> 
+                <View style={styles.separator2}></View>
+                <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:24,  marginBottom: 24}}>
+                    <Text style={styles.detailsTitle}>Cond.</Text>
+                    <View style={styles.detailsContent}>
+                        <TouchableOpacity onPress={()=> styleCondValidateB()}>
+                            <Text style={styleCond}>Iniciante</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={()=> styleCondValidateI()}>
+                            <Text style={styleCond2}>Intermed.</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={()=> styleCondValidateA()}>
+                            <Text style={styleCond3}>Avançado</Text>
+                        </TouchableOpacity>
+                    </View>                    
+                </View>
+                <View style={styles.separator2}></View>                 
+            </View>            
+            <View style={styles.content}>
+                <TouchableOpacity onPress={toHome} style={styles.button2}>
+                    <Text style={styles.buttonTitle}>Começar</Text>
+                </TouchableOpacity>
+                <View style={styles.flexDots}>
+                    <View style={styles.noColorDot}></View>
+                    <View style={styles.noColorDot}></View>
+                    <View style={styles.colorDot}></View>
+                </View>
+            </View>
+        </>
+    )
 }

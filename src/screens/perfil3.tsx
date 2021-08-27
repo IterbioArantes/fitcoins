@@ -28,6 +28,10 @@ export function Perfil3(){
 
     const [styleGener,setStyleGener] = useState(styles.detailGener);
     const [styleGener2,setStyleGener2] = useState(styles.detailGener);
+    const [sexo, setSexo] = useState('');
+    const [aniversario, setAniversario] = useState('');
+    const [altura, setAltura] = useState('');
+    const [peso, setPeso] = useState('');
 
     function styleGenerValidateM(){
         if(styleGener2 == styles.detailGenerPressed){
@@ -35,8 +39,10 @@ export function Perfil3(){
         }
         if(styleGener == styles.detailGener){
             setStyleGener(styles.detailGenerPressed)
+            setSexo('Homem')
         } else {
             setStyleGener(styles.detailGener)
+            setSexo('')
         }
     }
 
@@ -46,8 +52,10 @@ export function Perfil3(){
         }
         if(styleGener2 == styles.detailGener){
             setStyleGener2(styles.detailGenerPressed)
+            setSexo('Mulher')
         } else {
             setStyleGener2(styles.detailGener)
+            setSexo('')
         }
     }
 
@@ -61,6 +69,14 @@ export function Perfil3(){
         navigation.navigate('Home');
     }
 
+    const json_voorhees = {
+        sexo: sexo,
+        aniversario: aniversario,
+        peso: peso,
+        altura: altura
+    }
+
+    
     return(
         <>
             <View style={styles.content}>
@@ -81,14 +97,16 @@ export function Perfil3(){
                 <TouchableOpacity onPress={()=>clickDate()} style={styles.detailsContentPress}>
                     <Text style={styles.detailsTitle}>Aniversário</Text>
                     <View style={styles.detailsContent}>
-                        <TextInput style={{fontSize:18,color:'#480F31'}} placeholder={'dd/mm/yyyy'} ref={textInput1}></TextInput>
+                        <TextInput style={{fontSize:18,color:'#480F31'}} placeholder={'dd/mm/yyyy'} 
+                            ref={textInput1} onChangeText = {(aniversario) => setAniversario(aniversario)}></TextInput>
                     </View>
                 </TouchableOpacity>
                 <View style={styles.separator2}></View>           
                 <TouchableOpacity onPress={()=>clickHeigh()} style={styles.detailsContentPress}>
                     <Text style={styles.detailsTitle}>Altura</Text>
                     <View style={styles.detailsContent}>
-                        <TextInput ref={textInput2} maxLength = {3} keyboardType={'numeric'} style={styles.detailInput}></TextInput>
+                        <TextInput ref={textInput2} maxLength = {3} keyboardType={'numeric'} 
+                            style={styles.detailInput} onChangeText = {(altura) => setAltura(altura)}></TextInput>
                         <Text style={styles.detailsDesc}>cm</Text>
                     </View>
                 </TouchableOpacity>
@@ -96,7 +114,8 @@ export function Perfil3(){
                 <TouchableOpacity onPress={()=>clickWeight()} style={styles.detailsContentPress}>
                     <Text style={styles.detailsTitle}>Peso</Text>
                     <View style={styles.detailsContent}>
-                        <TextInput ref={textInput3} maxLength = {3} keyboardType={'numeric'} style={styles.detailInput}></TextInput>
+                        <TextInput ref={textInput3} maxLength = {3} keyboardType={'numeric'} 
+                            style={styles.detailInput} onChangeText = {(peso) => setPeso(peso)}></TextInput>
                         <Text style={styles.detailsDesc}>kg</Text>
                     </View>
                 </TouchableOpacity>

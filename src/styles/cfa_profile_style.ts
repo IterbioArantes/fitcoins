@@ -1,121 +1,183 @@
-import { StyleSheet } from 'react-native';
+  import { StyleSheet } from 'react-native';
 
-export const styles = StyleSheet.create({
-    barra: {
-      height: 60,
-      backgroundColor: '#480F31',
-      justifyContent: 'center',    
+  export const styles = StyleSheet.create({
+      
+      barra: {
+        height: 70,
+        backgroundColor: '#480F31',
+        justifyContent: 'center',    
+      },
+      entrar: {
+        fontSize : 20,
+        color: '#FFFF',
+        top: '-7%',
+        left: '36%',
+      }, 
+      seta: {
+        top: -50,
+        left: '10%',      
+      },
+      content:{
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginBottom: 8,
+      },
+      content2:{
+          marginLeft:22,
+          marginRight:22,
+          marginTop:77
+      },
+      content3:{
+          marginLeft:22,
+          marginRight:22,
+          marginTop:-20
+      },
+      detailsContent:{
+          flexDirection:'row',
+          justifyContent: 'space-between'
+      },
+      detailsContentPress:{
+          flexDirection:'row',
+          justifyContent: 'space-between',
+          marginTop:19,
+          marginBottom: 19
+      },
+      detailsTitle:{
+          fontSize:20,
+          color: '#707070',
+      },
+      detailInput:{
+          width:35,
+          fontSize:18,
+          color:'#480F31'
+      },
+      detailGener:{
+          fontSize:18,
+          color:'#480F31',
+          borderStyle: 'solid',
+          borderWidth: 1,
+          padding: 2,
+          paddingLeft: 5,
+          paddingRight: 5,
+          borderRadius: 3
+      },
+      detailGenerPressed:{
+          fontSize:18,
+          color:'white',
+          backgroundColor: '#480F31',
+          borderStyle: 'solid',
+          borderWidth: 1,
+          padding: 2,
+          paddingLeft: 5,
+          paddingRight: 5,
+          borderRadius: 3
+      },
+      detailCond:{
+        fontSize:18,
+        color:'#480F31',
+        borderStyle: 'solid',
+        borderWidth: 1,
+        padding: 2,
+        paddingLeft: 5,
+        paddingRight: 5,
+        borderRadius: 3
     },
-    entrar: {
-      fontSize : 20,
-      color: '#FFFF',
-      fontFamily: 'Quicksand',
-      top: '-7%',
-      left: '33%',
-    }, 
-    seta: {
-      top: -45,
-      left: '10%',      
+    detailCondPressed:{
+        fontSize:18,
+        color:'white',
+        backgroundColor: '#480F31',
+        borderStyle: 'solid',
+        borderWidth: 1,
+        padding: 2,
+        paddingLeft: 5,
+        paddingRight: 5,
+        borderRadius: 3
     },
-    textos_caixas: {
-      top: 10,
-      padding: 10,
-      fontSize: 20,  
-      fontFamily: 'Quicksand',
-      color: '#707070'
-    },
-    caixa: {
-      top: -24,
-      justifyContent: 'center',
-      height: 65,
-    },
-    digita: {
-      width: 150,
-      height: 25,
-      top: -22,
-      left: '60%',
-      justifyContent: 'center',             
-    },
-    textos_botoes: {
-      left: '-5%',
-      fontSize: 15,  
-      fontFamily: 'Quicksand',
-      color: '#707070'
-    },
-    botao1: {
-      top: 50,
-      left: '15%',
-    },
-    botao2: {
-      top: -3,
-      left: '40%',
-    },
-    botao3: {
-      top: -56,
-      left: '65%',      
-    },
-    botao_grupo: {
-      top: -10,
-      height: 80,
-      justifyContent: 'center',      
-    },
-    salvar: {
-      top: '3%',
-      left: '20%',
-      width: 200,
-      height:50,
-      backgroundColor: '#480F31',
-      borderRadius: 100,
-      justifyContent: 'center',
-    },
-    texto_salvar: {
-      fontSize: 20,  
-      fontFamily: 'Quicksand',
-      color: '#FFFF',
-      left: 35,
-    },
-    texto_1:{
-      top: '68%',
-      padding: 10,
-      fontSize: 20,  
-      fontFamily: 'Quicksand',
-      color: '#707070'
-    },
-    texto_2:{
-      top: '68%',
-      padding: 10,
-      fontSize: 20,  
-      fontFamily: 'Quicksand',
-      color: '#707070'
-    },
-    texto_3:{
-      top:'68%',
-      padding: 10,
-      fontSize: 20,  
-      fontFamily: 'Quicksand',
-      color: '#707070'
-    },
-    botao4: {
-      top: 50,
-      left: '15%',
-    },
-    botao5: {
-      top: -3,
-      left: '40%',
-    },
-    botao6: {
-      top: -56,
-      left: '70%',
-    },
-    barra_icones: {
-      padding: 8,
-      top: 18,
-      height: 65,
-      flexDirection: 'row',
-      justifyContent: 'space-around',     
-    },
-    icone_barra: {
-      width: 50,
-      top: 8,
-    },     
+      detailsDesc:{
+          fontSize:18,
+          color: '#480F31',
+          marginTop: 1
+      },
+      titles1:{
+          textAlign: 'center',
+          color:  '#051A98',
+          fontSize: 20,
+          marginTop: 38
+      },
+      image:{
+          height:245,
+          width:209,
+          marginTop: 70,
+          marginBottom: 38
+      },
+      button:{
+          height: 50,
+          backgroundColor: '#480F31',
+          justifyContent: 'center',
+          alignItems:'center',
+          borderRadius: 30,
+          width: '85%',
+          marginTop: 60
+      },
+      button2:{
+          height: 50,
+          backgroundColor: '#480F31',
+          justifyContent: 'center',
+          alignItems:'center',
+          borderRadius: 30,
+          width: '85%',
+          marginTop: 37
+      },
+      buttonTitle:{
+          color: 'white',
+          fontSize: 20
+      },
+      conditionType:{
+          color: '#707070',
+          fontSize: 20
+      },
+      descConditionType:{
+          fontSize: 18,
+      },
+      colorDot:{
+          backgroundColor: '#480F31',
+          width:13,
+          height:13,
+          borderRadius:13,
+          
+      },
+      noColorDot:{
+          backgroundColor: '#949397',
+          width:13,
+          height:13,
+          borderRadius:13,
+  
+      },
+      flexDots:{
+          flexDirection: "row",
+          marginTop:30,
+          width:73,
+          justifyContent: 'space-evenly'
+      },
+      separator:{
+          borderBottomColor: 'gray',
+          borderBottomWidth: 1,
+          marginLeft:5,
+          marginRight:5,
+          marginTop: 38,
+          marginBottom: 18
+      },
+      separator2:{
+          borderBottomColor: 'gray',
+          borderBottomWidth: 1
+      },
+      checkBoxContainer:{
+          marginTop:12,
+          flexDirection: 'row',
+          justifyContent: 'space-between'
+      },
+      checkBox:{
+          width:10,
+          height:10
+      }
   });

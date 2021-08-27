@@ -12,7 +12,7 @@
     "@expo-google-fonts/roboto": "^0.2.0",
     "@maksymblank/react-native-date-input": "^1.0.1",
     "@react-native-community/checkbox": "^0.5.8",
-    "@react-native-community/masked-view": "0.1.10",
+    "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/drawer": "^6.1.4",
     "@react-navigation/native": "^5.9.6",
     "@react-navigation/stack": "^5.14.7",

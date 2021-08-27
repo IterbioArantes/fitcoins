@@ -16,35 +16,47 @@ export function Perfil2(){
     const [toggleCheckBox1, setToggleCheckBox1] = useState(false);
     const [toggleCheckBox2, setToggleCheckBox2] = useState(false);
     const [toggleCheckBox3, setToggleCheckBox3] = useState(false);
+    const [condicao, setCondicao] = useState('');
 
     function validateToggleCheckBox(key:number){
         if(key == 1){
             if(toggleCheckBox1 == true){
                 setToggleCheckBox1(false)
+                setCondicao('')
             }else{
                 setToggleCheckBox2(false)
                 setToggleCheckBox3(false)
                 setToggleCheckBox1(true)
+                setCondicao('Iniciante')
             }
         } else if (key == 2){
             if(toggleCheckBox2 == true){
                 setToggleCheckBox2(false)
+                setCondicao('')
             }else{
                 setToggleCheckBox1(false)
                 setToggleCheckBox3(false)
                 setToggleCheckBox2(true)
+                setCondicao('Intermediario')
             }
         } else if (key == 3){
             if(toggleCheckBox3 == true){
                 setToggleCheckBox3(false)
+                setCondicao('')
             } else {
                 setToggleCheckBox1(false)
                 setToggleCheckBox2(false)
                 setToggleCheckBox3(true)
+                setCondicao('Avancado')
             }
         }
     }
 
+    const json_voorhees = {
+        cond: condicao
+    }
+
+    
     return(
         <>
             <View style={styles.content}>

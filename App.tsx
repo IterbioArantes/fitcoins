@@ -7,6 +7,7 @@ import { Perfil1 } from './src/screens/perfil1';
 import { Perfil2 } from './src/screens/perfil2';
 import { Perfil3 } from './src/screens/perfil3';
 import { Home } from './src/screens/home';
+import { Profile } from './src/screens/cfa_profile';
 
 export default function App(){
   return(
@@ -15,6 +16,6 @@ export default function App(){
       <Routes/>
     </>
     //<Perfil1/>
-    //<Register />
+    //<Register/>    
   );
 }
