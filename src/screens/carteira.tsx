@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { View, Text, TouchableOpacity, Image, Button } from 'react-native';
-import { createDrawerNavigator  } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/core';
 
-import { styles } from '../styles/home_style';
+import { styles } from '../styles/carteira_styles';
 import logo from '../../assets/logos/Fit.png'
 import buttonMenu from '../../assets/buttonMenu.png'
 
@@ -13,13 +12,7 @@ import { Index } from '.';
 import { Friends } from './friends';
 import { FitCoins } from './fitCoins';
 
-export function Home(){
-
-    const navigation = useNavigation();
-
-    function toCarteira(){
-        navigation.navigate('Carteira');
-    }
+export function Carteira(){
     
     return(
         
@@ -32,13 +25,20 @@ export function Home(){
                 <Image source={buttonMenu}/>
             </TouchableOpacity>
             <View style={styles.separator}></View>
-            <View style={{alignItems:'center',marginTop:44}}>
+            <View style={{alignItems:'center',marginTop:320}}>
                 <View style={styles.contentRooms}>
-                    <Text style={{color:'white',fontSize:18,marginBottom:13}}>         Comece Agora Mesmo {'\n'} Sua Aula Ou Encontre Seu Grupo</Text>
-                    <View>
-                        <TouchableOpacity onPress={toCarteira} style={styles.buttonsRooms}>
-                            <Text style={styles.textbuttonsRooms}> Encontrar Aula</Text>
-                        </TouchableOpacity>                        
+                    <View style={styles.buttonsRoomsHeader}>
+                        <Text style={styles.textbuttonsRoomsHeader}>Carteira</Text>
+                    </View>
+                    <View style={{flexDirection:'row',justifyContent: 'space-between',width:'100%', paddingTop: 30}}>
+                        <View style={styles.buttonsRooms}>
+                            <Text style={styles.textbuttonsRooms}>Saldo </Text>
+                            <Text style={styles.textbuttonsRooms}>R$00,00 </Text>
+                        </View>
+                        <View style={styles.buttonsRooms}>
+                            <Text style={styles.textbuttonsRooms}>Bônus</Text>
+                            <Text style={styles.textbuttonsRooms}>R$00,00 </Text>
+                        </View>
                     </View>
                 </View>
             </View>

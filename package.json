@@ -10,6 +10,7 @@
   "dependencies": {
     "@breeffy/react-native-calendar": "^0.4.1",
     "@expo-google-fonts/roboto": "^0.2.0",
+    "@expo/ngrok": "^4.1.0",
     "@maksymblank/react-native-date-input": "^1.0.1",
     "@react-native-community/checkbox": "^0.5.8",
     "@react-native-community/masked-view": "^0.1.11",
@@ -36,7 +37,8 @@
     "react-native-web": "^0.17.1",
     "react-navigation": "^4.4.4",
     "react-navigation-drawer": "^2.7.1",
-    "toggle-switch-react-native": "^3.2.0"
+    "toggle-switch-react-native": "^3.2.0",
+    "yarn": "^1.22.11"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
