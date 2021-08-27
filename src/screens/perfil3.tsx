@@ -70,7 +70,7 @@ export function Perfil3(){
     }
 
     const json_voorhees = {
-        sexo: sexo,
+        genero: sexo,
         aniversario: aniversario,
         peso: peso,
         altura: altura

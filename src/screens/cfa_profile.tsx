@@ -100,7 +100,7 @@ export function Profile(){
         aniversario: aniversario,
         altura: altura,
         peso: peso,
-        sexo: sexo,
+        genero: sexo,
         cond: cond
     }
 
