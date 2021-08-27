@@ -44,7 +44,7 @@ export function AuthRoutes(){
             <Screen
                 name="Profile"
                 component={Profile}
-            />
+            />            
             
         </Navigator>
     )

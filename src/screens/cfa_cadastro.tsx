@@ -70,6 +70,11 @@ export function Register(){
     }
   }
 
+  const json_voorhees = {
+    email: email,
+    senha: password1
+  }
+
   return(
     <View>
       <View style={styles.topBar}>

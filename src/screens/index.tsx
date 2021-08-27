@@ -9,6 +9,7 @@ import { useFonts } from 'expo-font';
 import { useState } from 'react';
 
 import { styles } from '../styles/index_styles';
+import { color } from 'react-native-reanimated';
 
 
 export function Index() {
@@ -37,10 +38,16 @@ export function Index() {
     return null;
   }
 
+  const json_voorhees = {
+    email: input,
+    senha: input2
+  }
+
   return (
 
     /* View principal para prevenir subida indesejada do teclado (iOS) */
-    <View>
+    <View
+     style={{backgroundColor: '#C5A2CB'}}>
       <View style={styles.barra}>
         <Text style={styles.entrar}>Entrar</Text>
       </View>
@@ -48,7 +55,7 @@ export function Index() {
         <TextInput 
           style={styles.email}
           placeholder='Email'
-          placeholderTextColor= '#A4A2AA'
+          placeholderTextColor= '#707070'
           value= {input}
           onChangeText= {(texto_email) => setInput(texto_email)}>                            
         </TextInput>
@@ -57,7 +64,7 @@ export function Index() {
         <TextInput 
           style={styles.senha}
           placeholder='Senha'
-          placeholderTextColor= '#A4A2AA'
+          placeholderTextColor= '#707070'
           value= {input2}
           onChangeText= {(texto_senha) => setInput2(texto_senha)}
           secureTextEntry= {escondeSenha}>           
