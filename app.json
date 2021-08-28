@@ -4,11 +4,11 @@
     "slug": "fitcoins",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logos/Fit.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logos/splash_FIT.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#C5A2CB"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,12 +21,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/logos/Fit.png",
+        "backgroundColor": "#C5A2CB"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/logos/Fit.png"
     }
   }
 }
