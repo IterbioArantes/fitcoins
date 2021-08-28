@@ -26,10 +26,14 @@ export const styles = StyleSheet.create({
         justifyContent:'space-between',
         flexDirection:'row',
         alignItems:'center',
-    },
-    border:{
+        borderTopRightRadius:40,
+        borderBottomRightRadius: 40,
+        borderRightWidth:1,
         borderColor: "#763082",
         borderBottomWidth:1,
+    },
+    button1:{
+        borderTopWidth: 1,
     },
     texto:{
         color:"white",

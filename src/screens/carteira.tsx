@@ -13,6 +13,12 @@ import { Friends } from './friends';
 import { FitCoins } from './fitCoins';
 
 export function Carteira(){
+
+    const navigation = useNavigation();
+
+    function toMenu(){
+        navigation.goBack();
+    }
     
     return(
         
@@ -21,7 +27,7 @@ export function Carteira(){
             <View style={styles.contentLogo}>
                 <Image source={logo} style={styles.logo}/>
             </View>
-            <TouchableOpacity style={styles.buttonMenu}>
+            <TouchableOpacity onPress={toMenu} style={styles.buttonMenu}>
                 <Image source={buttonMenu}/>
             </TouchableOpacity>
             <View style={styles.separator}></View>

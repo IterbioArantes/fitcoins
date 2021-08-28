@@ -43,36 +43,29 @@ export function Menu(){
                 <View style={styles.contentLogo}>
                     <Image source={logo} style={styles.logo}/>
                 </View>
-                <View style={styles.border}></View>
-                <TouchableOpacity onPress={toClass} style={styles.button}>
+                <TouchableOpacity onPress={toClass} style={[styles.button1,styles.button]}>
                     <Text style={styles.texto}>Aulas</Text>
                     <Image source={classes} style={styles.icons}/>
                 </TouchableOpacity>
-                <View style={styles.border}></View>
                 <TouchableOpacity onPress={toFriends} style={styles.button}>
                     <Text style={styles.texto}>Amigos</Text>
                 </TouchableOpacity>
-                <View style={styles.border}></View>
                 <TouchableOpacity onPress={toWallet} style={styles.button}>
                     <Text style={styles.texto}>Carteira</Text>
                     <Image source={wallet} style={styles.icons}/>
                 </TouchableOpacity>
-                <View style={styles.border}></View>
                 <TouchableOpacity onPress={toFitCoins} style={styles.button}>
                     <Text style={styles.texto}>FitCoins</Text>
                     <Image source={money_1} style={styles.icons}/>
                 </TouchableOpacity>
-                <View style={styles.border}></View>
                 <TouchableOpacity onPress={toProfile} style={styles.button}>
                     <Text style={styles.texto}>Editar Perfil</Text>
                     <Image source={edit} style={styles.icons}/>
                 </TouchableOpacity>
-                <View style={styles.border}></View>
                 <TouchableOpacity onPress={toExit} style={styles.button}>
                     <Text style={styles.texto}>Sair</Text>
                     <Image source={exit} style={styles.icons}/>
                 </TouchableOpacity>
-                <View style={styles.border}></View>
             </View>
         </>
     )
