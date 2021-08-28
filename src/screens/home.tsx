@@ -20,6 +20,10 @@ export function Home(){
     function toCarteira(){
         navigation.navigate('Carteira');
     }
+
+    function toMenu(){
+        navigation.navigate('Menu');
+    }
     
     return(
         
@@ -28,7 +32,7 @@ export function Home(){
             <View style={styles.contentLogo}>
                 <Image source={logo} style={styles.logo}/>
             </View>
-            <TouchableOpacity style={styles.buttonMenu}>
+            <TouchableOpacity onPress={toMenu} style={styles.buttonMenu}>
                 <Image source={buttonMenu}/>
             </TouchableOpacity>
             <View style={styles.separator}></View>

@@ -10,6 +10,10 @@ import { Perfil3 } from '../screens/perfil3';
 import { Home } from '../screens/home';
 import { Profile } from '../screens/cfa_profile';
 import { Carteira } from '../screens/carteira';
+import { Menu } from '../screens/menu';
+import { Friends } from '../screens/friends'
+import { FitCoins } from '../screens/fitCoins'
+import { Class } from '../screens/aulas'
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -49,7 +53,23 @@ export function AuthRoutes(){
             <Screen
                 name="Carteira"
                 component={Carteira}
-            />                   
+            />
+            <Screen
+                name="Menu"
+                component={Menu}
+            />
+            <Screen
+                name="Friends"
+                component={Friends}
+            />
+            <Screen
+                name="FitCoins"
+                component={FitCoins}
+            />
+            <Screen
+                name="Class"
+                component={Class}
+            />                    
             
         </Navigator>
     )

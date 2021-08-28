@@ -96,6 +96,10 @@ export function Profile(){
         navigation.navigate('Home');
     }
 
+    function backMenu() {
+        navigation.goBack();
+    }
+
     const json_voorhees = {
         aniversario: aniversario,
         altura: altura,
@@ -111,7 +115,7 @@ export function Profile(){
                 <Text style={styles.entrar}>Editar perfil</Text>
             </View>
             <TouchableOpacity
-                onPress={() => Alert.alert('Seta Esquerda','Sai pra lá!')}
+                onPress={backMenu}
                 style={styles.seta}>
                 <Image 
                     source={require('../../assets/seta.png')} 
