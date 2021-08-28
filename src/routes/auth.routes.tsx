@@ -13,7 +13,7 @@ import { Carteira } from '../screens/carteira';
 import { Menu } from '../screens/menu';
 import { Friends } from '../screens/friends'
 import { FitCoins } from '../screens/fitCoins'
-import { Class } from '../screens/aulas'
+import { Aulas } from '../screens/aulas'
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -68,7 +68,7 @@ export function AuthRoutes(){
             />
             <Screen
                 name="Class"
-                component={Class}
+                component={Aulas}
             />                    
             
         </Navigator>

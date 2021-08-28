@@ -47,16 +47,9 @@ export function Menu(){
                     <Text style={styles.texto}>Aulas</Text>
                     <Image source={classes} style={styles.icons}/>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={toFriends} style={styles.button}>
-                    <Text style={styles.texto}>Amigos</Text>
-                </TouchableOpacity>
                 <TouchableOpacity onPress={toWallet} style={styles.button}>
                     <Text style={styles.texto}>Carteira</Text>
                     <Image source={wallet} style={styles.icons}/>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={toFitCoins} style={styles.button}>
-                    <Text style={styles.texto}>FitCoins</Text>
-                    <Image source={money_1} style={styles.icons}/>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={toProfile} style={styles.button}>
                     <Text style={styles.texto}>Editar Perfil</Text>

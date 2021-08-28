@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, TouchableOpacity, Image, Button } from 'react-native';
+import { View, Text, TouchableOpacity, Image, Button, Linking } from 'react-native';
 import { createDrawerNavigator  } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/core';
@@ -18,7 +18,7 @@ export function Home(){
     const navigation = useNavigation();
 
     function toCarteira(){
-        navigation.navigate('Carteira');
+        Linking.openURL("https://meet.jit.si/ProjetaoFiticoins");
     }
 
     function toMenu(){
